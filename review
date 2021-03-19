@@ -1,0 +1,66 @@
+#1
+vehicleModel="Toyota 4Runner"
+mpg=17.6
+cylinders=4
+wd4=True
+print("The vehicleModel is: ",vehicleModel,"and type is:",type(vehicleModel))
+print("The mpg is: ",mpg,"and type is:",type(mpg))
+print("The cylinders is: ",cylinders,"and type is:",type(cylinders))
+print("The wd4 is: ",wd4,"and type is:",type(wd4))
+#2
+# could assign variable with value right away, dont have to put string (invest=5000..)
+invest=int(input("Enter the amount of money invested: "))
+intRate=float(input("Enter the interest rate: "))
+term=int(input("Enter the number of year invested: "))
+import math
+amount = invest * math.e **(intRate * term)
+print("This investment will be worth $", round(amount,2),"after",term,"years invested with an",intRate,"interest rate." )
+
+#3
+# could put earning=75000
+earning=int(input("Enter the earning here: "))
+tax_rate=0
+if earning>100000:
+    tax_rate=0.28
+    print("the tax rate is", tax_rate)
+elif earning>90000:
+     tax_rate=0.25
+     print("the tax rate is", tax_rate)
+elif earning>70000:
+    tax_rate=0.20
+    print("the tax rate is", tax_rate)
+elif earning>50000:
+    tax_rate=0.15
+    print("the tax rate is", tax_rate)    
+else:
+    tax_rate=0.10
+    print("the tax rate is", tax_rate) 
+   
+    """
+  
+   #4
+startRep=int(input("Enter the number of rep to start with "))
+endRep=int(input("Enter the number of rep to end with: "))
+incr=int(input("Enter the increment: "))
+
+total=0
+for rep in range (startRep,endRep+incr,incr):
+    print("Did",rep,"this round")
+    total+=rep
+    
+print("You did",total,"reps in this exercise.")
+    
+    
+    #5
+    
+    
+fin_grade=0.00   
+while True:
+    grade=input("Enter the individual grade components here or hit enter to quit: ")
+    if grade=="":
+        break
+    grade=float(grade)
+    fin_grade+=grade
+    
+print("Your final grade is: ",fin_grade)
+  
