@@ -1,0 +1,15 @@
+bounceness=0.6
+
+  #input section of program, enter number of bounce input
+
+height=int(input("Enter the initial height from which the ball is dropped: "))
+bouncenum=int(input("Enter the number of bounce here: " ))
+
+distance = 0.0 
+for bounce in range(bouncenum): # use for since its definite loop, questions askk users how many times, just 1 answers
+    distance+=height  + (height*bounceness) #add falling distance to distance 
+    height= height * bounceness  #calculate the new height
+   
+ 
+        #display the result
+print("Total distance traveled is ", distance)   
