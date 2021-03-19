@@ -1,0 +1,108 @@
+file=open("textFile.txt","w")
+file.write("Line One\nLine Two\nLine Three\n")
+file.close()
+
+
+#read file created above
+file2=open("textFile.txt","r")
+text=file2.read() #handle file in one block
+print(text)
+file2.close()
+
+
+file2=open("textFile.txt","r")
+for ln in file2:
+    
+text=file2.read()
+print(text)
+file2.close()
+
+
+file=open("lyrics.txt","r")
+while True:
+    line=file.readline()
+    if line=="":
+        break
+    line=line.strip("\n")
+    print(line)
+file.close()
+
+"""
+myString="Happy"
+print(myString)
+myString="Saint Patrick's Day"
+print(myString)
+
+#print string character in downward list
+strng="I woke up this morning at 6:01"
+for char in strng:
+    print(char)
+    
+
+#print string character by char accross list
+strng="I woke up this morning at 6:01"
+for char in strng:
+    print(char,end="-")
+    
+
+#print string character word by word
+strng="I woke up this morning at 6:01"
+for char in strng:
+    if char==" ":
+        print("")
+    else:
+        print(char, end="")
+        
+        
+
+myString="this is my string"
+size=len(myString)
+print("The string is",size, "character long.")
+
+chrPos=0
+for char in myString:
+    print(chrPos,char)
+    chrPos+=1
+print("Here is the first character of myString " + myString[0])
+print("Here is the last character of myString " + myString[size-1])
+print("Here is the last character of myString " + myString[-1])
+print("Here is the last character of myString " + myString[len(myString)-1])
+
+mid=int(len(myString)/2)
+
+print("Here is the middle character of myString " + myString[mid])
+
+
+newString="Somewhere where the summer last whole year 'round'"
+
+#for letter in newString:
+ #   print(letter,"==>",ord(letter))
+
+for letter in newString:
+    if "where" in newString:
+        print()
+      
+   
+newString="Somewhere where the summer last whole year 'round'"
+newList=newString.split()
+print(newList)
+#print newList, type newList
+for word in newList:
+    print(word, end=" ")
+    for letter in word:
+        
+        ltrOrd=ord(letter)
+        convOrd=ltrOrd+2
+        letter=chr(convOrd)
+        print(letter, end="-")
+        
+    print("")
+        
+ 
+newString="Somewhere where the summer last whole year 'round'"
+newList=newString.split()
+for word in newList:
+    if "where" in word:
+        print(word)
+
+
