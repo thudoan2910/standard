@@ -1,0 +1,27 @@
+price=int(input("Enter the purchase price here: "))
+month=1
+dwnpay=0.1*price
+int_rate=0.1
+mthpay=0.05*(price-dwnpay)
+startBal=price-mthpay
+print("Month","\t","Starting Balance","\t","Interest to Pay","\t","Principle to Pay","\t","Payment","\t","Ending Balance")
+      
+
+while startBal>0:
+    
+    if startBal<mthpay:
+        int_amt=0
+        prin=startBal
+        payment=startBal
+        ending_bal=0
+    
+    else:
+        
+        int_amt=startBal*(0.12/12)
+        prin=mthpay-int_amt
+        payment=int_amt+prin
+        ending_bal=startBal-prin
+    print("{:1d}{:20f}{:20f}{:20f}{:15f}{:15f}".format(month, startBal, int_amt, prin, payment, ending_bal))
+
+    startBal=ending_bal                                          
+    month+=1  
