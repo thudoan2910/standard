@@ -1,0 +1,10 @@
+startSal=float(input("Enter the starting salary: "))
+per=float(input("Enter the percentage increase: "))
+yrnum=int(input("Enter the number of year: "))
+
+yr=1
+print("Year \t\t Salary")
+
+for year in range (1,yrnum+1):
+    newSal=startSal*(1+per)
+    print("Year",year,"\t", round(newSal,2))
